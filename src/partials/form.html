@@ -1,14 +1,89 @@
 <p>Rellena y crea tu carta</p>
-<section class="form-design">
+<section class="section-design form-design">
+    <div class="section-design__title">
+        <p>Diseña</p>
+        <button class="arrow"></button>
+    </div>
+    
     <form>
         <!-- aquí el apartado de poner fondo de imagen -->
     </form>
 </section>
-<section class="form-fill">
+<section class="section-design form-fill">
+    <div class="section-design__title">
+        <p><strong>Rellena</strong></p>
+        <button class="arrow"></button>
+    </div>
     <form>
-        <input value="aquí algo"/>
+        <label> Nombre: 
+            <input class="input" type="text" required placeholder="ej. Eowyn"/>
+        </label>
+        <br/><!-- CAMBIAR BR -->
+        <p>Elemento:</p>
+        <input type="checkbox" id="tierra" name="tierra" value="tierra">
+        <label for="tierra"> Tierra</label>
+        <input type="checkbox" id="fuego" name="fuego" value="fuego">
+        <label for="fuego"> Fuego</label>
+        <input type="checkbox" id="agua" name="agua" value="agua">
+        <label for=""> Agua</label>
+        <input type="checkbox" id="viento" name="viento" value="viento">
+        <label for=""> Viento</label>
+
+            <br/><!-- CAMBIAR BR -->
+        <label for="raza">Raza:</label>
+        <select name="raza" id="raza">
+            <option  selected disabled value="">Elige una raza</option>
+            <option value="Elfo">Elfo</option>
+            <option value="Goblins">Goblins</option>
+            <option value="Hada">Hada</option>
+            <option value="Dracónido">Dracónido</option>
+            <option value="Hobbit">Hobbit</option>
+        </select>
+            <br/> <!-- CAMBIAR BR -->
+        <label for="lugar">Origen:</label>
+        <select name="lugar" id="lugar">
+            <option selected disabled value="">Elige un lugar</option>
+            <option value="Sylvaris">Sylvaris (Elfos del Crepúsculo)</option>
+            <option value="Ondar">Ondar (Seres Abisales)</option>
+            <option value="Igryn">Igryn (Hijos de la Llama)</option>
+            <option value="Nefelyr">Nefelyr (Errantes del Viento)</option>
+            <option value="Terragónida">Terragónida (Guardianes de Raíz)</option>
+        </select>
+        <br/><!-- CAMBIAR BR -->
+        <!-- NUMBER CONTROLAR EL MÁXIMO 100 SI FUNCIONA -->
+        <label>Nivel (máx. 100): 
+            <input class="input" type="number" required placeholder="1"  min="1" max="100"/>
+        </label>
+        <br/><!-- CAMBIAR BR -->
+        <label>Descripción: 
+            <textarea class="textarea" maxlength="200">Describe tu personaje (max 200 caracteres)</textarea>
+        </label>
+        <label for="habilidad">Habilidad:</label>
+        <select name="habilidad" id="habilidad">
+            <option selected disabled value="">Elige una habilidad</option>
+            <option value="Barrera de luz">Barrera de luz</option>
+            <option value="Paso sombrío">Paso sombrío</option>
+            <option value="Afinidad natural">Afinidad natural</option>
+            <option value="Previsión etérea">Previsión etérea</option>
+            <option value="Rugido de núcleo">Rugido de núcleo</option>
+        </select>
+        <br/><!-- CAMBIAR BR -->
+        <label for="arma">Arma:</label>
+        <select name="arma" id="arma">
+            <option selected disabled value="">Elige un arma</option>
+            <option value="Daga">Daga</option>
+            <option value="Báculo">Báculo</option>
+            <option value="Martillo">Martillo</option>
+            <option value="Talismán">Talismán</option>
+            <option value="Arco">Arco</option>
+        </select>
+        
     </form>
 </section>
-<section class="form-share">
+<section class="section-design form-share">
+    <div class="section-design__title">
+        <p>Comparte</p>
+        <button class="arrow"></button>
+    </div>
     <button>Comparte</button>
 </section>

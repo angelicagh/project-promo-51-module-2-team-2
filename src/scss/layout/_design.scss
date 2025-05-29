@@ -1,14 +1,19 @@
 
 .main-design{
-  max-width: 1200px;
+  width: 1000px;
   display: flex;
   flex-direction: row;
+  background-color: white;
+  margin: auto;
+  justify-content: space-around;
 }
 
 .section-form{
-  width: 50%;
+  width: 60%;
+  padding: 20px;
 }
 
 .section-card{
-  width: 50%;
+  width: 40%;
+  padding: 20px;
 }
