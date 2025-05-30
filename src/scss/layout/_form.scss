@@ -1,25 +1,32 @@
 .section-design{
-  background: #faf8f5;
-margin: 10px;
+  background-color: rgba(19, 18, 18, 0.7); 
+  backdrop-filter: blur(5px); 
+  color: #ffffff;
+  margin: 10px;
   width: 100%;
   border-radius: 5px;
+  box-shadow: rgba(255, 255, 255, 0.35) 20px 20px 50px 20px;
+
   &__title{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     padding: 1rem 1rem 0.8rem 1rem;
+    font-size: 1.2rem;
   }
 }
 
-.arrow {
-  width:0px;
-  margin-top: 5px;
-  height:0px;
-  border-style: solid;
-  border-width: 7px;
-  border-radius: 3px;
-  border-bottom-width:0px;
-  border-color: rgb(134, 134, 134) transparent transparent transparent;
+.arrow{
+  background-color: transparent;
+  width: 10px;
+  height: 10px;
+  border: none;
+  border: solid rgb(255, 255, 255);
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
 }
 
 .line-shadow{

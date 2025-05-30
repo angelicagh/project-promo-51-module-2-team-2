@@ -1,4 +1,8 @@
 .header {
-  background-color: rgb(209, 154, 154);
-  height: 100px;;
+  width: 1000px;
+  margin: 35px auto 25px auto;
+  text-align: center;
+  &__title{
+    font-size: 4rem;
+  }
 }
