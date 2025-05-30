@@ -1,12 +1,13 @@
 .section-design{
-  background-color:rgb(243, 243, 233);
-  margin: 10px;
+  background: #faf8f5;
+margin: 10px;
   width: 100%;
-  padding: 15px;
+  border-radius: 5px;
   &__title{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    padding: 1rem 1rem 0.8rem 1rem;
   }
 }
 
@@ -21,16 +22,76 @@
   border-color: rgb(134, 134, 134) transparent transparent transparent;
 }
 
-.input{
+.line-shadow{
+  display:block;
+  width: 100%;
+  height: 3px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.09) 0px 2px 4px -1px;
+}
+.form-bg{
+  padding: 1rem;
+  display: flex;
+  gap: 20px;
+  &__options{
+    display: flex;
+    gap: 5px;
 
+  }
+  &__img{
+    display:block;
+    width: 90px;
+    height: 60px;
+    border-radius: 2px;
+    background-position: center center;
+    background-size: cover;
+  }
+  &__img--1{
+    background-image: url("../images/background-01.jpg");
+  }
+  &__img--2{
+    background-image: url("../images/background-02.jpg");
+  }
+  &__img--3{
+    background-image: url("../images/background-03.jpg");
+  }
+  &__img--4{
+    background-image: url("../images/background-04.jpg");
+  }
+}
+
+.form{
+  display: grid;
+  grid-template-columns: 30% 70%;
+  padding: 1rem;
+}
+
+.label{
+  margin-top: 1rem;
+  font-weight: 600;
+}
+
+.input{
+  min-height: 2rem;
+  margin: 0.5rem 0;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  border-radius: 3px;
+  padding: 5px;
+}
+
+.checkbox-box{
+  margin: 1rem 0 0.5rem 0;
 }
 
 .textarea{
-  margin-top: 5px;
+  margin-top: 0.2rem;
   width: 100%;
   display: block;
   resize: none;
   height: 105px;
   text-align: start;
-  padding: 5px;
+}
+
+.inside-share{
+  padding: 1rem;
 }

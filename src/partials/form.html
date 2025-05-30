@@ -1,37 +1,51 @@
-<p>Rellena y crea tu carta</p>
 <section class="section-design form-design">
     <div class="section-design__title">
-        <p>Diseña</p>
+        <p><strong>Decora tu carta</strong></p>
         <button class="arrow"></button>
     </div>
-    
-    <form>
-        <!-- aquí el apartado de poner fondo de imagen -->
+    <span class="line-shadow"></span>
+    <form class="form-bg">
+       <div class="form-bg__options">
+            <input type="radio" id="html" name="fav_language" value="HTML">
+            <label for="html" class="form-bg__img form-bg__img--1"></label>
+        </div>
+        <div class="form-bg__options">
+            <input type="radio" id="html" name="fav_language" value="HTML">
+            <label for="html" class="form-bg__img form-bg__img--2"></label>
+        </div>
+        <div class="form-bg__options">
+            <input type="radio" id="html" name="fav_language" value="HTML">
+            <label for="html" class="form-bg__img form-bg__img--3"></label>
+        </div>
+        <div class="form-bg__options">
+            <input type="radio" id="html" name="fav_language" value="HTML">
+            <label for="html" class="form-bg__img form-bg__img--4"></label>
+        </div>
     </form>
 </section>
 <section class="section-design form-fill">
     <div class="section-design__title">
-        <p><strong>Rellena</strong></p>
+        <p><strong>Crea tu personaje</strong></p>
         <button class="arrow"></button>
     </div>
-    <form>
-        <label> Nombre: 
-            <input class="input" type="text" required placeholder="ej. Eowyn"/>
-        </label>
-        <br/><!-- CAMBIAR BR -->
-        <p>Elemento:</p>
-        <input type="checkbox" id="tierra" name="tierra" value="tierra">
-        <label for="tierra"> Tierra</label>
-        <input type="checkbox" id="fuego" name="fuego" value="fuego">
-        <label for="fuego"> Fuego</label>
-        <input type="checkbox" id="agua" name="agua" value="agua">
-        <label for=""> Agua</label>
-        <input type="checkbox" id="viento" name="viento" value="viento">
-        <label for=""> Viento</label>
+    <span class="line-shadow"></span>
+    <form class="form">
+        <label for="nombre" class="label">Nombre</label>
+            <input id="nombre" class="input" type="text" required placeholder="ej. Eowyn"/>
+        <p class="label">Elemento:</p>
+        <div class="checkbox-box">
+            <input type="checkbox" id="tierra" name="tierra" value="tierra">
+            <label for="tierra"> Tierra</label>
+            <input type="checkbox" id="fuego" name="fuego" value="fuego">
+            <label for="fuego"> Fuego</label>
+            <input type="checkbox" id="agua" name="agua" value="agua">
+            <label for=""> Agua</label>
+            <input type="checkbox" id="viento" name="viento" value="viento">
+            <label for=""> Viento</label>
+    </div>
 
-            <br/><!-- CAMBIAR BR -->
-        <label for="raza">Raza:</label>
-        <select name="raza" id="raza">
+        <label for="raza" class="label">Raza:</label>
+        <select class="input" name="raza" id="raza">
             <option  selected disabled value="">Elige una raza</option>
             <option value="Elfo">Elfo</option>
             <option value="Goblins">Goblins</option>
@@ -39,27 +53,16 @@
             <option value="Dracónido">Dracónido</option>
             <option value="Hobbit">Hobbit</option>
         </select>
-            <br/> <!-- CAMBIAR BR -->
-        <label for="lugar">Origen:</label>
-        <select name="lugar" id="lugar">
-            <option selected disabled value="">Elige un lugar</option>
-            <option value="Sylvaris">Sylvaris (Elfos del Crepúsculo)</option>
-            <option value="Ondar">Ondar (Seres Abisales)</option>
-            <option value="Igryn">Igryn (Hijos de la Llama)</option>
-            <option value="Nefelyr">Nefelyr (Errantes del Viento)</option>
-            <option value="Terragónida">Terragónida (Guardianes de Raíz)</option>
-        </select>
-        <br/><!-- CAMBIAR BR -->
+
         <!-- NUMBER CONTROLAR EL MÁXIMO 100 SI FUNCIONA -->
-        <label>Nivel (máx. 100): 
-            <input class="input" type="number" required placeholder="1"  min="1" max="100"/>
-        </label>
-        <br/><!-- CAMBIAR BR -->
-        <label>Descripción: 
-            <textarea class="textarea" maxlength="200">Describe tu personaje (max 200 caracteres)</textarea>
-        </label>
-        <label for="habilidad">Habilidad:</label>
-        <select name="habilidad" id="habilidad">
+        <label for="nivel" class="label">Nivel (máx. 100):</label>
+            <input id="nivel" class="input" type="number" required placeholder="1"  min="1" max="100"/>
+        
+        <label for="descripcion" class="label">Descripción:</label>
+            <textarea id="descripcion" class="textarea input" maxlength="200">Describe tu personaje (max 200 caracteres)</textarea>
+        
+        <label for="habilidad" class="label">Habilidad:</label>
+        <select class="input" name="habilidad" id="habilidad">
             <option selected disabled value="">Elige una habilidad</option>
             <option value="Barrera de luz">Barrera de luz</option>
             <option value="Paso sombrío">Paso sombrío</option>
@@ -67,9 +70,18 @@
             <option value="Previsión etérea">Previsión etérea</option>
             <option value="Rugido de núcleo">Rugido de núcleo</option>
         </select>
-        <br/><!-- CAMBIAR BR -->
-        <label for="arma">Arma:</label>
-        <select name="arma" id="arma">
+
+        <label for="lugar" class="label">Origen:</label>
+        <select class="input" name="lugar" id="lugar">
+            <option selected disabled value="">Elige un lugar</option>
+            <option value="Sylvaris">Sylvaris (Elfos del Crepúsculo)</option>
+            <option value="Ondar">Ondar (Seres Abisales)</option>
+            <option value="Igryn">Igryn (Hijos de la Llama)</option>
+            <option value="Nefelyr">Nefelyr (Errantes del Viento)</option>
+            <option value="Terragónida">Terragónida (Guardianes de Raíz)</option>
+        </select>
+        <label for="arma" class="label">Arma:</label>
+        <select class="input" name="arma" id="arma">
             <option selected disabled value="">Elige un arma</option>
             <option value="Daga">Daga</option>
             <option value="Báculo">Báculo</option>
@@ -82,8 +94,11 @@
 </section>
 <section class="section-design form-share">
     <div class="section-design__title">
-        <a>Comparte</p>
+        <p><strong>Comparte</strong></p>
         <button class="arrow"></button>
     </div>
-    <button href="share.html">Comparte</button>
+    <span class="line-shadow"></span>
+    <div class="inside-share">
+        <button href="share.html">Comparte</button>
+    </div>
 </section>

@@ -8,12 +8,16 @@
 
 .card{
   background-color:rgb(67, 87, 80);
-  background-image: url("https://placebear.com/250/400");
+  background-image: url("../images/background-02.jpg");
+  background-position: center center;
+  background-size: cover;
   display: block;
   width: 250px;
   height: 350px;
   border-radius: 10px;
   padding:12px;
+  position: sticky;
+  top: 25%;
 }
 
 .card__top{
