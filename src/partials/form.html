@@ -30,8 +30,8 @@
     </div>
     <span class="line-shadow"></span>
     <form class="form">
-        <label for="nombre" class="label">Nombre</label>
-            <input id="nombre" class="input" type="text" required placeholder="ej. Eowyn"/>
+        <label for="name" class="label">Nombre</label>
+            <input id="name" class="input" type="text" required placeholder="ej. Eowyn"/>
         <p class="label">Elemento:</p>
         <div class="checkbox-box">
             <input type="checkbox" id="tierra" name="tierra" value="tierra">
@@ -44,9 +44,13 @@
             <label for=""> Viento</label>
     </div>
 
-        <label for="raza" class="label">Raza:</label>
-        <select class="input" name="raza" id="raza">
-            <option  selected disabled value="">Elige una raza</option>
+        <label for="picture" class="label">Imagen:</label>
+        <input type="file" id="picture" class="input"  name="picture" />
+
+
+        <label for="family" class="label">Criatura:</label>
+        <select class="input" name="family" id="family">
+            <option  selected disabled value="">Elige una criatura legendaria</option>
             <option value="Elfo">Elfo</option>
             <option value="Goblins">Goblins</option>
             <option value="Hada">Hada</option>
@@ -55,14 +59,14 @@
         </select>
 
         <!-- NUMBER CONTROLAR EL MÁXIMO 100 SI FUNCIONA -->
-        <label for="nivel" class="label">Nivel (máx. 100):</label>
-            <input id="nivel" class="input" type="number" required placeholder="1"  min="1" max="100"/>
+        <label for="level" class="label">Nivel (máx. 100):</label>
+            <input id="level" class="input" type="number" required placeholder="1"  min="1" max="100"/>
         
-        <label for="descripcion" class="label">Descripción:</label>
-            <textarea id="descripcion" class="textarea input" maxlength="200">Describe tu personaje (max 200 caracteres)</textarea>
+        <label for="description" class="label">Descripción:</label>
+            <textarea id="description" class="textarea input" maxlength="200">Describe tu personaje (max 200 caracteres)</textarea>
         
-        <label for="habilidad" class="label">Habilidad:</label>
-        <select class="input" name="habilidad" id="habilidad">
+        <label for="skill" class="label">Habilidad:</label>
+        <select class="input" name="skill" id="skill">
             <option selected disabled value="">Elige una habilidad</option>
             <option value="Barrera de luz">Barrera de luz</option>
             <option value="Paso sombrío">Paso sombrío</option>
@@ -71,8 +75,8 @@
             <option value="Rugido de núcleo">Rugido de núcleo</option>
         </select>
 
-        <label for="lugar" class="label">Origen:</label>
-        <select class="input" name="lugar" id="lugar">
+        <label for="origin" class="label">Origen:</label>
+        <select class="input" name="origin" id="origin">
             <option selected disabled value="">Elige un lugar</option>
             <option value="Sylvaris">Sylvaris (Elfos del Crepúsculo)</option>
             <option value="Ondar">Ondar (Seres Abisales)</option>
