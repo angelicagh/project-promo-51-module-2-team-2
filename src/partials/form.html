@@ -1,10 +1,10 @@
 <section class="section-design form-design">
     <div class="section-design__title">
         <p><strong>Decora tu carta</strong></p>
-        <button class="arrow"></button>
+        <button class="arrow js-arrow"></button>
     </div>
     <span class="line-shadow"></span>
-    <form class="form-background">
+    <form class="form-background js-form-background">
        <div class="form-background__options">
             <input name="background" type="radio" id="bg-1"  value="bg-1">
             <label for="bg-1" class="form-background__img form-background__img--1"></label>
@@ -26,14 +26,14 @@
 <section class="section-design form-fill">
     <div class="section-design__title">
         <p><strong>Crea tu personaje</strong></p>
-        <button class="arrow"></button>
+        <button class="arrow js-arrow"></button>
     </div>
     <span class="line-shadow"></span>
     <form class="form">
         <label for="name" class="label">Nombre</label>
-            <input id="name" class="input" type="text" required placeholder="ej. Eowyn"/>
+            <input id="name" class="input js-input-name" type="text" required placeholder="ej. Eowyn"/>
         <p class="label">Elemento:</p>
-        <div class="checkbox-box">
+        <div class="checkbox-box js-checkbox-element">
             <input type="checkbox" id="tierra" name="tierra" value="tierra">
             <label for="tierra"> Tierra</label>
             <input type="checkbox" id="fuego" name="fuego" value="fuego">
@@ -48,9 +48,9 @@
         <input type="file" id="picture" class="input"  name="picture" />
 
 
-        <label for="family" class="label">Criatura:</label>
-        <select class="input" name="family" id="family">
-            <option  selected disabled value="">Elige una criatura legendaria</option>
+        <label for="family" class="label">Raza:</label>
+        <select class="input js-input-family" name="family" id="family">
+            <option  selected disabled value="">Elige una raza legendaria</option>
             <option value="Elfo">Elfo</option>
             <option value="Goblins">Goblins</option>
             <option value="Hada">Hada</option>
@@ -60,13 +60,13 @@
 
         <!-- NUMBER CONTROLAR EL MÁXIMO 100 SI FUNCIONA -->
         <label for="level" class="label">Nivel (máx. 100):</label>
-            <input id="level" class="input" type="number" required placeholder="1"  min="1" max="100"/>
+            <input id="level" class="input js-input-level" type="number" required placeholder="1"  min="1" max="100"/>
         
         <label for="description" class="label">Descripción:</label>
-            <textarea id="description" class="textarea input" maxlength="200">Describe tu personaje (max 200 caracteres)</textarea>
+            <textarea id="description" class="textarea input js-input-description" maxlength="200">Describe tu personaje (max 200 caracteres)</textarea>
         
         <label for="skill" class="label">Habilidad:</label>
-        <select class="input" name="skill" id="skill">
+        <select class="input js-input-skill" name="skill" id="skill">
             <option selected disabled value="">Elige una habilidad</option>
             <option value="Barrera de luz">Barrera de luz</option>
             <option value="Paso sombrío">Paso sombrío</option>
@@ -76,7 +76,7 @@
         </select>
 
         <label for="origin" class="label">Origen:</label>
-        <select class="input" name="origin" id="origin">
+        <select class="input js-input-origin" name="origin" id="origin">
             <option selected disabled value="">Elige un lugar</option>
             <option value="Sylvaris">Sylvaris (Elfos del Crepúsculo)</option>
             <option value="Ondar">Ondar (Seres Abisales)</option>
@@ -84,8 +84,8 @@
             <option value="Nefelyr">Nefelyr (Errantes del Viento)</option>
             <option value="Terragónida">Terragónida (Guardianes de Raíz)</option>
         </select>
-        <label for="arma" class="label">Arma:</label>
-        <select class="input" name="arma" id="arma">
+        <label for="weapon" class="label">Arma:</label>
+        <select class="input js-input-weapon" name="weapon" id="weapon">
             <option selected disabled value="">Elige un arma</option>
             <option value="Daga">Daga</option>
             <option value="Báculo">Báculo</option>
@@ -99,7 +99,7 @@
 <section class="section-design form-share">
     <div class="section-design__title">
         <p><strong>Comparte</strong></p>
-        <button class="arrow"></button>
+        <button class="arrow js-arrow"></button>
     </div>
     <span class="line-shadow"></span>
     <div class="inside-share">
