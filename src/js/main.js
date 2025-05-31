@@ -14,6 +14,8 @@ console.log("ready")
 
 const cardWeapon = document.querySelector(".js-card-weapon");
 const inputWeapon = document.querySelector(".js-input-weapon");
+const cardOrigin = document.querySelector(".js-card-origin");
+const inputOrigin = document.querySelector(".js-input-origin");
 
 
 
@@ -21,10 +23,9 @@ function handleClickWeapon(event) {
     event.preventDefault();
     let weapon = event.target.value;
     console.log(weapon);
-
-
-
-
+    cardWeapon.innerHTML = weapon;
 }
+
+
 
 inputWeapon.addEventListener("click", handleClickWeapon);
