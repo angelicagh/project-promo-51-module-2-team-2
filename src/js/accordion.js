@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-
-
-=======
 'use strict';
 
 console.log("accordion funciona");
@@ -37,4 +33,3 @@ accordionHeaders.forEach((header) => {
     }
   });
 });
->>>>>>> 50f8f57d0d420e56c2104682e9c2ba0f8b6f172a
