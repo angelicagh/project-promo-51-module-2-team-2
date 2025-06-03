@@ -103,3 +103,45 @@
 .inside-share{
   padding: 1rem;
 }
+
+
+.accordion-item {
+  margin-bottom: 5px;
+}
+
+.accordion-header {
+  padding: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  color: white;
+}
+
+.accordion-content {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.6s ease, padding 0.3s ease;
+  padding: 0 10px;
+  color: white;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.accordion-content.active {
+  max-height: 1000px;
+  padding: 10px;
+}
+
+
+.inside-share {
+  margin-bottom: 2rem;
+}
+.inside-share button {
+  height: 40px;
+  width: 100px;
+  margin-bottom: 1rem;
+  background-color: rgb(184, 153, 95);
+  color: rgb(255, 255, 255);
+  border-radius: 10px;
+  border: none;
+  font-size: 16px;
+}
