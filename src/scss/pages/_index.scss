@@ -1,10 +1,9 @@
 body {
   background-image: url('/images/fondo2.jpg');
-  background-size: cover;
+  background-size: cover 100vh;
   background-position: fixed;
   background-repeat: no-repeat;
   font-family: milonga, sans-serif;
-  overflow: hidden;
 }
 
 .main {

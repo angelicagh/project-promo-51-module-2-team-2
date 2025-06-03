@@ -3,6 +3,7 @@
 import "./form.js";
 import "./share.js";
 import "./accordion.js";
+import "./get-avatar.js";
 
 
 

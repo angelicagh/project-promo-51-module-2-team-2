@@ -5,36 +5,24 @@
       <button class="arrow js-arrow"></button>
     </div>
     <div class="accordion-content">
-      <form class="form-background js-form-background">
-        <div class="form-background__options">
-          <input name="background" type="radio" id="bg-1" value="bg-1" />
-          <label
-            for="bg-1"
-            class="form-background__img form-background__img--1"
-          ></label>
+      <form class="form-background">
+       <div class="form-background__options">
+            <input name="background" type="radio" id="input-bg-1" class="hidden" value="bg-1">
+            <label for="input-bg-1"  id ="bg-1" class="js_background-img form-background__img form-background__img--1"></label>
         </div>
         <div class="form-background__options">
-          <input name="background" type="radio" id="bg-2" value="bg-2" />
-          <label
-            for="bg-2"
-            class="form-background__img form-background__img--2"
-          ></label>
+           <input name="background" type="radio" id="input-bg-2" class="hidden" value="bg-2">
+            <label for="input-bg-2" id ="bg-2" class="js_background-img form-background__img form-background__img--2"> </label>
         </div>
         <div class="form-background__options">
-          <input name="background" type="radio" id="bg-3" value="bg-3" />
-          <label
-            for="bg-3"
-            class="form-background__img form-background__img--3"
-          ></label>
+            <input name="background" type="radio" id="input-bg-3" class="hidden" value="bg-3">
+            <label for="input-bg-3" id ="bg-3"  class="js_background-img form-background__img form-background__img--3"></label>
         </div>
         <div class="form-background__options">
-          <input name="background" type="radio" id="bg-4" value="bg-4" />
-          <label
-            for="bg-4"
-            class="form-background__img form-background__img--4"
-          ></label>
+            <input name="background" type="radio" id="input-bg-4" class="hidden" value="bg-4">
+            <label for="input-bg-4"  id ="bg-4" class="js_background-img form-background__img form-background__img--4"></label>
         </div>
-      </form>
+    </form>
     </div>
   </div>
 </section>
@@ -47,13 +35,7 @@
     <div class="accordion-content">
       <form class="form">
         <label for="name" class="label">Nombre</label>
-        <input
-          id="name"
-          class="input js-input-name"
-          type="text"
-          required
-          placeholder="ej. Eowyn"
-        />
+        <input id="name"  class="input js-input-name js_input" type="text" required placeholder="ej. Eowyn"/>
         <p class="label">Elemento:</p>
         <div class="checkbox-box js-checkbox-element">
           <input type="checkbox" id="tierra" name="tierra" value="tierra" />
@@ -61,16 +43,17 @@
           <input type="checkbox" id="fuego" name="fuego" value="fuego" />
           <label for="fuego"> Fuego</label>
           <input type="checkbox" id="agua" name="agua" value="agua" />
-          <label for=""> Agua</label>
+          <label for="agua"> Agua</label>
           <input type="checkbox" id="viento" name="viento" value="viento" />
-          <label for=""> Viento</label>
+          <label for="viento"> Viento</label>
         </div>
 
-        <label for="picture" class="label">Imagen:</label>
-        <input type="file" id="picture" class="input" name="picture" />
+        <p class="label">Sube una imagen:</p>
+        <label for="picture" for="picture" class="label label__picture">Carga tu imagen</label>
+        <input type="file" id="picture" class="input hidden js-profile-upload-btn"  name="picture" />
 
         <label for="family" class="label">Raza:</label>
-        <select class="input js-input-family" name="family" id="family">
+        <select class="input js-input-family js_input" name="family" id="family">
           <option selected disabled value="">Elige una raza legendaria</option>
           <option value="Elfo">Elfo</option>
           <option value="Goblins">Goblins</option>
@@ -82,20 +65,13 @@
         <!-- NUMBER CONTROLAR EL MÁXIMO 100 SI FUNCIONA -->
         <label for="level" class="label">Nivel (máx. 100):</label>
         <input
-          id="level"
-          class="input js-input-level"
-          type="number"
-          required
-          placeholder="1"
-          min="1"
-          max="100"
-        />
+          id="level" class="input js-input-level"  type="number" required placeholder="1" min="1" max="100"/>
 
         <label for="description" class="label">Descripción:</label>
-        <textarea id="description" class="textarea input js-input-description" placeholder="Describe tu personaje (max 200 caracteres)" maxlength="200"></textarea>
+        <textarea id="description" class="textarea input js-input-description js_input" placeholder="Describe tu personaje (max 200 caracteres)" maxlength="200"></textarea>
 
         <label for="skill" class="label">Habilidad:</label>
-        <select class="input js-input-skill" name="skill" id="skill">
+        <select class="input js-input-skill js_input" name="skill" id="skill">
           <option selected disabled value="">Elige una habilidad</option>
           <option value="Barrera de luz">Barrera de luz</option>
           <option value="Paso sombrío">Paso sombrío</option>
@@ -105,7 +81,7 @@
         </select>
 
         <label for="origin" class="label">Origen:</label>
-        <select class="input js-input-origin" name="origin" id="origin">
+        <select class="input js-input-origin js_input" name="origin" id="origin">
           <option selected disabled value="">Elige un lugar</option>
           <option value="Sylvaris">Sylvaris (Elfos del Crepúsculo)</option>
           <option value="Ondar">Ondar (Seres Abisales)</option>
@@ -114,7 +90,7 @@
           <option value="Terragónida">Terragónida (Guardianes de Raíz)</option>
         </select>
         <label for="weapon" class="label">Arma:</label>
-        <select class="input js-input-weapon" name="weapon" id="weapon">
+        <select class="input js-input-weapon js_input" name="weapon" id="weapon">
           <option selected disabled value="">Elige un arma</option>
           <option value="Daga">Daga</option>
           <option value="Báculo">Báculo</option>
