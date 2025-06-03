@@ -28,3 +28,4 @@ function handleClickOrigin(event) {
 inputWeapon.addEventListener("change", handleClickWeapon); // select va con change como input va con input 
 inputOrigin.addEventListener("change", handleClickOrigin);
 
+ 

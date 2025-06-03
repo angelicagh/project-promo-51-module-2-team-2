@@ -1,30 +1,35 @@
 'use strict';
 
-console.log("form funciona");
+console.log("accordion funciona");
 
-const cardWeapon = document.querySelector(".js-card-weapon");
-const inputWeapon = document.querySelector(".js-input-weapon");
-const cardOrigin = document.querySelector(".js-card-origin");
-const inputOrigin = document.querySelector(".js-input-origin");
-const cardSkill = document.querySelector(".js-card-skill");
-const inputSkill = document.querySelector(".js-input-skill");
-const cardFamily = document.querySelector(".js-card-family");
-const inputFamily = document.querySelector(".js-input-family");
+const accordionHeaders = document.querySelectorAll(".accordion-header");
+const accordionContents = document.querySelectorAll(".accordion-content");
 
 
-function handleClickWeapon(event) {
-    event.preventDefault();
-    let weapon = event.target.value;
-    cardWeapon.innerHTML = weapon;
-};
+accordionHeaders.forEach((header) => {
+  header.addEventListener("click", () => {
+    const accordionItem = header.parentElement;
+    const accordionContent = accordionItem.querySelector(".accordion-content");
 
-function handleClickOrigin(event) {
-    event.preventDefault();
-    let origin = event.target.value;
-    cardOrigin.innerHTML = origin;
-};
+    accordionContents.forEach((content) => {
+      if (content !== accordionContent) {
+        content.classList.remove("active");
+        content.style.maxHeight = "0";
+        content.style.paddingTop = "0";
+        content.style.paddingBottom = "0";
+      }
+    });
 
+    accordionContent.classList.toggle("active");
 
-inputWeapon.addEventListener("change", handleClickWeapon); // select va con change como input va con input 
-inputOrigin.addEventListener("change", handleClickOrigin);
-
+    if (accordionContent.classList.contains("active")) {
+      accordionContent.style.maxHeight = accordionContent.scrollHeight + "px";
+      accordionContent.style.paddingTop = "10px";
+      accordionContent.style.paddingBottom = "10px";
+    } else {
+      accordionContent.style.maxHeight = "0";
+      accordionContent.style.paddingTop = "0";
+      accordionContent.style.paddingBottom = "0";
+    }
+  });
+});
