@@ -2,8 +2,8 @@
 console.log("avatar funciona");
 const fr = new FileReader();
 const fileField = document.querySelector('.js-profile-upload-btn');
-// const profileImage = document.querySelector('.js-profile-image');
-const profilePreview = document.querySelector('.js-profile-preview');
+const profileImage = document.querySelector('.js-profile-image');
+//const profilePreview = document.querySelector('.js-profile-preview');
 
 
 /**
@@ -32,7 +32,7 @@ function writeImage() {
      * de nuestro componente.
      */
     profileImage.style.backgroundImage = `url(${fr.result})`;
-    profilePreview.style.backgroundImage = `url(${fr.result})`;
+    // profilePreview.style.backgroundImage = `url(${fr.result})`;
 
     /* Si en lugar de establecer la imagen como fondo de un elemento, 
       estás trabajando con una etiqueta <img> en el HTML, entonces en vez de 
