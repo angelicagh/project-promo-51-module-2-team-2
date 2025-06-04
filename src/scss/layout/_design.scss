@@ -1,3 +1,6 @@
+html, body {
+  overflow-x: hidden;
+}
 
 .main-design{
   width: 1000px;
@@ -16,4 +19,26 @@
 .section-card{
   width: 40%;
   padding: 20px;
+}
+@media (max-width: 768px) {
+  .main-design {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    overflow-x: hidden;
+
+  }
+
+  .section-form,
+  .section-card {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .card {
+    position: static;
+    top: auto;
+    margin-top: 1rem;
+     max-width: 100%; 
+  }
 }
