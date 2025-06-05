@@ -121,40 +121,5 @@ function resetCard() {
 resetButton.addEventListener("click", resetCard);
 
 
-const data = 
-     {
-    "field1": parseInt(level.innerHTML),
-    "field2": name.innerHTML,
-    "field3": family.innerHTML,
-    "field4": description.innerHTML,
-    "field5": skill.innerHTML,
-    "field6": origin.innerHTML,
-    "field7": weapon.innerHTML,
-    "photo": image.style.backgroundImage,
-    };
 
-const buttonCreateCard = document.querySelector(".js-create-button");
-const linkCreatedCard = document.querySelector(".js-share-text");
 
-const handleClickCreateCard = (ev) => {
-    ev.preventDefault();
-    console.log(data);
-    fetch("https://dev.adalab.es/api/info/data", {
-        method: "POST",
-        headers: { 
-            "Content-Type": "application/json"},
-        body: JSON.stringify(data),
-})
-
-    .then((response) => response.json())
-    .then((data) => {
-        console.log("Success:", data);
-        linkCreatedCard.href = `https://adalab.es/ejercicios-de-adalab/${data.id}`;
-        linkCreatedCard.classList.remove("hidden");
-    })
-    .catch((error) => {
-        console.error("Error:", error);
-    }   );
-};  
-
-buttonCreateCard.addEventListener("click", handleClickCreateCard);

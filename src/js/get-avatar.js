@@ -32,6 +32,7 @@ function writeImage() {
      * de nuestro componente.
      */
     profileImage.style.backgroundImage = `url(${fr.result})`;
+    data.photo = fr.result; 
     // profilePreview.style.backgroundImage = `url(${fr.result})`;
 
     /* Si en lugar de establecer la imagen como fondo de un elemento, 
