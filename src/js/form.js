@@ -8,53 +8,7 @@ const inputLevel = document.querySelector(".js-input-level ");
 const cardLevel = document.querySelector(".js-card-level");
 const selectBg = document.querySelectorAll(".js_background-img");
 const card = document.querySelector(".js-card");
-//CÓDIGO INICIAL:::
-//const cardWeapon = document.querySelector(".js-card-weapon");
-//const inputWeapon = document.querySelector(".js-input-weapon");
-//const cardOrigin = document.querySelector(".js-card-origin");
-//const inputOrigin = document.querySelector(".js-input-origin");
 
-/* function handleClickWeapon(event) {
-    event.preventDefault();
-    let weapon = event.target.value;
-    cardWeapon.innerHTML = weapon;
-};
-
-function handleClickOrigin(event) {
-    event.preventDefault();
-    let origin = event.target.value;
-    cardOrigin.innerHTML = origin;
-};
-
-inputWeapon.addEventListener("change", handleClickWeapon); // select va con change como input va con input 
-inputOrigin.addEventListener("change", handleClickOrigin);
-
-  */
-
-// fUNCIÓN RESUMIDA CON IFS::::::
-/* function handleInput(event) {
-    event.preventDefault();
-    let item = event.target.value;
-    let input = event.currentTarget.id;
-    console.log(input);
-  if (input === "name"){
-            cardName.innerHTML = item;
-    } else if (input === "family"){
-            cardFamily.innerHTML = item;
-    } else if (input === "level"){
-            cardLevel.innerHTML = item;
-    } else if (input === "description"){
-            cardDescription.innerHTML = item;
-    } else if ( input === "skill"){
-            cardSkill.innerHTML = item;
-    } else if (input === "origin"){
-            cardOrigin.innerHTML = item;
-    } else if (input === "weapon"){
-            cardWeapon.innerHTML = item;
-    } 
-}; */
-
-// FUNCIÓN MEGA RESUMIDA::::
 function handleInput(ev) {
   let item = ev.target.value;
   let input = ev.currentTarget.id;
@@ -167,3 +121,40 @@ function resetCard() {
 resetButton.addEventListener("click", resetCard);
 
 
+const data = 
+     {
+    "field1": parseInt(level.innerHTML),
+    "field2": name.innerHTML,
+    "field3": family.innerHTML,
+    "field4": description.innerHTML,
+    "field5": skill.innerHTML,
+    "field6": origin.innerHTML,
+    "field7": weapon.innerHTML,
+    "photo": image.style.backgroundImage,
+    };
+
+const buttonCreateCard = document.querySelector(".js-create-button");
+const linkCreatedCard = document.querySelector(".js-share-text");
+
+const handleClickCreateCard = (ev) => {
+    ev.preventDefault();
+    console.log(data);
+    fetch("https://dev.adalab.es/api/info/data", {
+        method: "POST",
+        headers: { 
+            "Content-Type": "application/json"},
+        body: JSON.stringify(data),
+})
+
+    .then((response) => response.json())
+    .then((data) => {
+        console.log("Success:", data);
+        linkCreatedCard.href = `https://adalab.es/ejercicios-de-adalab/${data.id}`;
+        linkCreatedCard.classList.remove("hidden");
+    })
+    .catch((error) => {
+        console.error("Error:", error);
+    }   );
+};  
+
+buttonCreateCard.addEventListener("click", handleClickCreateCard);

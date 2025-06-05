@@ -1,13 +1,13 @@
-.section-design{
-  background-color: rgba(19, 18, 18, 0.7); 
-  backdrop-filter: blur(5px); 
+.section-design {
+  background-color: rgba(19, 18, 18, 0.7);
+  backdrop-filter: blur(5px);
   color: #ffffff;
   margin: 10px;
   width: 100%;
   border-radius: 5px;
   box-shadow: rgba(255, 255, 255, 0.35) 20px 20px 50px 20px;
 
-  &__title{
+  &__title {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -16,7 +16,7 @@
   }
 }
 
-.arrow{
+.arrow {
   background-color: transparent;
   width: 10px;
   height: 10px;
@@ -29,69 +29,70 @@
   -webkit-transform: rotate(45deg);
 }
 
-.line-shadow{
-  display:block;
+.line-shadow {
+  display: block;
   width: 100%;
   height: 3px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.09) 0px 2px 4px -1px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+    rgba(0, 0, 0, 0.09) 0px 2px 4px -1px;
 }
-.form-background{
+.form-background {
   padding: 1rem;
   display: flex;
   gap: 20px;
-  &__options{
+  &__options {
     display: flex;
     gap: 5px;
-
   }
-   &__img{
-    display:block;
+  &__img {
+    display: block;
     width: 110px;
     height: 60px;
     border-radius: 2px;
     background-position: center center;
     background-size: cover;
   }
-  &__img--selected{
-  box-shadow: rgba(255, 255, 255, 0.4) 0px 1px 5px 3px, rgba(255, 255, 255, 0.4) 0px 0px 5px 4px;
+  &__img--selected {
+    box-shadow: rgba(255, 255, 255, 0.4) 0px 1px 5px 3px,
+      rgba(255, 255, 255, 0.4) 0px 0px 5px 4px;
   }
-  &__img--1{
+  &__img--1 {
     background-image: url("../images/background-01.jpg");
   }
-  &__img--2{
+  &__img--2 {
     background-image: url("../images/background-02.jpg");
   }
-  &__img--3{
+  &__img--3 {
     background-image: url("../images/background-03.jpg");
   }
-  &__img--4{
+  &__img--4 {
     background-image: url("../images/background-04.jpg");
   }
 }
 
- .card-bg-1{
-    background-image: url("../images/background-01.jpg");
-  }
-   .card-bg-2{
-    background-image: url("../images/background-02.jpg");
-  }
-   .card-bg-3{
-    background-image: url("../images/background-03.jpg");
-  }
-   .card-bg-4{
-    background-image: url("../images/background-04.jpg");
-  }
+.card-bg-1 {
+  background-image: url("../images/background-01.jpg");
+}
+.card-bg-2 {
+  background-image: url("../images/background-02.jpg");
+}
+.card-bg-3 {
+  background-image: url("../images/background-03.jpg");
+}
+.card-bg-4 {
+  background-image: url("../images/background-04.jpg");
+}
 
-.form{
+.form {
   display: grid;
   grid-template-columns: 30% 70%;
   padding: 1rem;
 }
 
-.label{
+.label {
   margin-top: 1rem;
   font-weight: 600;
-   &__picture{
+  &__picture {
     display: block;
     margin-top: 0.7rem;
     height: 30px;
@@ -107,7 +108,7 @@
   }
 }
 
-.input{
+.input {
   min-height: 2rem;
   margin: 0.5rem 0;
   border: none;
@@ -117,11 +118,11 @@
   background-color: #ffffff;
 }
 
-.checkbox-box{
+.checkbox-box {
   margin: 1rem 0 0.5rem 0;
 }
 
-.textarea{
+.textarea {
   margin-top: 0.2rem;
   width: 100%;
   display: block;
@@ -130,10 +131,9 @@
   text-align: start;
 }
 
-.inside-share{
+.inside-share {
   padding: 1rem;
 }
-
 
 .accordion-item {
   margin-bottom: 5px;
@@ -161,21 +161,26 @@
   padding: 10px;
 }
 
-
-.inside-share {
-  margin-bottom: 2rem;
-}
 .inside-share button {
   height: 40px;
   width: 100px;
-  margin-bottom: 1rem;
   background-color: rgb(184, 153, 95);
   color: rgb(255, 255, 255);
   border-radius: 10px;
   border: none;
   font-size: 16px;
+  margin-bottom: 1rem;
+  margin-top: 0.5rem;
 }
 
 .hidden {
   display: none;
+}
+
+.share-text {
+  display: block;
+  margin-bottom: 0.5rem;
+  height: 50px;
+  text-decoration: none;
+  color: white;
 }
