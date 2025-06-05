@@ -6,6 +6,7 @@
   width: 100%;
   border-radius: 5px;
   box-shadow: rgba(255, 255, 255, 0.35) 20px 20px 50px 20px;
+  padding-bottom: 1rem;
 
   &__title {
     display: flex;
@@ -105,7 +106,16 @@
     border-radius: 10px;
     font-weight: 400;
     text-align: center;
+    transition: all 0.3s ease;
   }
+}
+.label__picture:hover {
+  box-shadow: 0 0 8px 3px rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+  transform: scale(1.03);
+  transition: all 0.3s ease;
+    background-color: #f5e2b6;
+   color: rgb(60, 50, 30);
 }
 
 .input {
@@ -121,7 +131,6 @@
 .checkbox-box {
   margin: 1rem 0 0.5rem 0;
 }
-
 .textarea {
   margin-top: 0.2rem;
   width: 100%;
@@ -130,22 +139,19 @@
   height: 105px;
   text-align: start;
 }
-
 .inside-share {
   padding: 1rem;
+  padding-bottom: 2.5rem;
 }
-
 .accordion-item {
   margin-bottom: 5px;
 }
-
 .accordion-header {
   padding: 10px;
   cursor: pointer;
   font-weight: bold;
   color: white;
 }
-
 .accordion-content {
   overflow: hidden;
   max-height: 0;
@@ -155,31 +161,74 @@
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
 }
-
 .accordion-content.active {
   max-height: 1000px;
   padding: 10px;
 }
-
+.reset__btn{
+  background-color: rgb(184, 153, 95);
+  border-radius: 8px;
+  color: rgb(255, 255, 255);
+  width: 80px;
+  height: 30px;
+  font-size: 18px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  transition: all 0.3s ease;
+  font-weight: 300;
+  border: none;
+}
+.reset__btn:hover{
+  box-shadow: 0 0 8px 3px rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+  transform: scale(1.03);
+  transition: all 0.3s ease;
+   background-color: #f5e2b6;
+   color: rgb(60, 50, 30);
+}
+.hidden{
+  display: none;
+}
 .inside-share button {
   height: 40px;
   width: 100px;
-  background-color: rgb(184, 153, 95);
+  background-color: rgb(172, 141, 84);
   color: rgb(255, 255, 255);
   border-radius: 10px;
   border: none;
   font-size: 16px;
   margin-bottom: 1rem;
   margin-top: 0.5rem;
+  transition: all 0.3s ease;
+  text-shadow: 1px 1px 4px rgba(39, 26, 7, 0.7);
+  text-align: center;
 }
-
-.hidden {
-  display: none;
+.inside-share button:hover{
+   box-shadow: 0 0 8px 3px rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+  transform: scale(1.03);
+  transition: all 0.3s ease;
+    background-color: #f5e2b6;
+   color: rgb(60, 50, 30);
 }
 
 .share-text {
-  display: block;
-  margin-bottom: 0.5rem;
-  height: 50px;
   color: white;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  text-shadow: 1px 1px 4px rgba(58, 39, 10, 0.7);
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  display:inline-block;
+  font-weight: bold;
 }
+
+.share-text:hover {
+  transform: scale(1.1);
+  transform-origin: center;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+  cursor: pointer;
+}
+
+
