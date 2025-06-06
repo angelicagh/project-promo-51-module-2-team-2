@@ -70,7 +70,7 @@ export default defineConfig({
       /* pass your config */
     }),
     concat({
-      input: ['main.js']
+      input: ['main.js', 'share.js']
     }),
   ],
 });
