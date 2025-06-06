@@ -39,8 +39,8 @@ const handleClickCreateCard = (ev) => {
     }   );
 
 };  
-
-buttonCreateCard.addEventListener("click", handleClickCreateCard);
+if (buttonCreateCard){
+buttonCreateCard.addEventListener("click", handleClickCreateCard);}
 
 
 

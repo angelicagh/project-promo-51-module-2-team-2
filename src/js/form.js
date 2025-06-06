@@ -9,23 +9,6 @@ const resetButton = document.querySelector(".js-reset-btn");
 const inputLevel = document.querySelector(".js-input-level ");
 const selectBg = document.querySelectorAll(".js_background-img");
  
-// constantes carta: 
-
-let cardElements = document.querySelector(".js-card-elements");
-const cardLevel = document.querySelector(".js-card-level");
-const card = document.querySelector(".js-card");
-let name = document.querySelector(".js-card-name");
-let family = document.querySelector(".js-card-family");
-let description = document.querySelector(".js-card-description");
-let skill = document.querySelector(".js-card-skill");
-let origin = document.querySelector(".js-card-origin");
-let weapon = document.querySelector(".js-card-weapon");
-let level = document.querySelector(".js-card-level");
-let image = document.querySelector(".js-profile-image");
-let elementagua = document.querySelector(".js-element-agua");
-let elementfuego = document.querySelector(".js-element-fuego");
-let elementviento = document.querySelector(".js-element-viento");
-let elementtierra = document.querySelector(".js-element-tierra");
 
 
 // FUNCIONES
@@ -59,6 +42,7 @@ function handleClickLevel(event) {
 
 // checkbox los 4 elementos (tierra, agua, viento, fuego)
 // hecho con función arrow para demostrar que no se nos ha olvidado que también existen (como Teruel) 
+if (checkboxElements){
 checkboxElements.addEventListener("change", (ev) => {
   let element = ev.target;
   let elValue = element.value;
@@ -72,6 +56,7 @@ checkboxElements.addEventListener("change", (ev) => {
   // data.field9 = cardElements;
   console.log(cardElements);
 });
+}
 
 // decorar el fondo de la carta
 function handleSelectBg(ev) {
@@ -120,8 +105,10 @@ function resetCard() {
 // EVENTOS Y LLAMADAS A FUNCIONES
 initInputs();
 initSelectBg();
-inputLevel.addEventListener("input", handleClickLevel);
-resetButton.addEventListener("click", resetCard);
+if (inputLevel){
+  inputLevel.addEventListener("input", handleClickLevel);}
+if (resetButton){
+resetButton.addEventListener("click", resetCard);}
 
 
 

@@ -16,4 +16,6 @@ function writeImage() {
     data.photo = fr.result; 
 }
 
-fileField.addEventListener('change', getImage);
+if (fileField){
+    fileField.addEventListener('change', getImage);
+};
