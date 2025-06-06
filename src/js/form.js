@@ -1,14 +1,36 @@
 "use strict";
 
-console.log("form funciona");
+// CONSTANTES Y VARIABLES 
+
+// constantes en el form:
 let inputSelectAll = document.querySelectorAll(".js_input");
 const checkboxElements = document.querySelector(".js-checkbox-element");
-const cardElements = document.querySelector(".js-card-elements");
+const resetButton = document.querySelector(".js-reset-btn");
 const inputLevel = document.querySelector(".js-input-level ");
-const cardLevel = document.querySelector(".js-card-level");
 const selectBg = document.querySelectorAll(".js_background-img");
-const card = document.querySelector(".js-card");
+ 
+// constantes carta: 
 
+const cardElements = document.querySelector(".js-card-elements");
+const cardLevel = document.querySelector(".js-card-level");
+const card = document.querySelector(".js-card");
+let name = document.querySelector(".js-card-name");
+let family = document.querySelector(".js-card-family");
+let description = document.querySelector(".js-card-description");
+let skill = document.querySelector(".js-card-skill");
+let origin = document.querySelector(".js-card-origin");
+let weapon = document.querySelector(".js-card-weapon");
+let level = document.querySelector(".js-card-level");
+let image = document.querySelector(".js-profile-image");
+let elementagua = document.querySelector(".js-element-agua");
+let elementfuego = document.querySelector(".js-element-fuego");
+let elementviento = document.querySelector(".js-element-viento");
+let elementtierra = document.querySelector(".js-element-tierra");
+
+
+// FUNCIONES
+
+// función para los inputs de texto y selects
 function handleInput(ev) {
   let item = ev.target.value;
   let input = ev.currentTarget.id;
@@ -23,23 +45,20 @@ function initInputs() {
   });
 }
 
-initInputs();
-
-// input número
-
+// input level (para que no sea mayor de 100)
 function handleClickLevel(event) {
   event.preventDefault();
   let level = parseInt(inputLevel.value);
   if (level > 100 || level < 1) {
-    //alert("Por favor, ingresa un número entre 1 y 100");//sale un mensaje de alerta para que añada un numero valido y no se escribe en la tarjeta
-    inputLevel.value = ""; //tras el mensaje de alerta el campo del nivel se vuelve a quedar en blanco
+    inputLevel.value = ""; 
     inputLevel.placeholder = "Tiene que ser menos de 100";
   } else {
     cardLevel.innerHTML = level;
   }
 }
 
-// checkbox los 4 elementos
+// checkbox los 4 elementos (tierra, agua, viento, fuego)
+// hecho con función arrow para demostrar que no se nos ha olvidado que también existen (como Teruel) 
 checkboxElements.addEventListener("change", (ev) => {
   let element = ev.target;
   let elValue = element.value;
@@ -52,23 +71,17 @@ checkboxElements.addEventListener("change", (ev) => {
   }
 });
 
-// imagen fondo ponerla bonita:::
-
+// decorar el fondo de la carta
 function handleSelectBg(ev) {
   let background = ev.target;
   let inputBgId = `input-${background.id}`;
   let cardBgClass = `card-${background.id}`;
   let inputBg = document.getElementById(inputBgId);
-  //console.log(background);
   if (inputBg.checked === false) {
     selectBg.forEach((bg) => {
       bg.classList.remove("form-background__img--selected");
     });
-    card.classList.remove("card-bg-1");
-    card.classList.remove("card-bg-2");
-    card.classList.remove("card-bg-3");
-    card.classList.remove("card-bg-4");
-
+    card.classList.remove("card-bg-1", "card-bg-2", "card-bg-3", "card-bg-4");
     inputBg.checked;
     background.classList.add("form-background__img--selected");
     card.classList.add(cardBgClass);
@@ -83,25 +96,7 @@ function initSelectBg() {
   });
 }
 
-initSelectBg();
-
-// EVENTOS
-inputLevel.addEventListener("input", handleClickLevel);
-
-const resetButton = document.querySelector(".js-reset-btn");
-
-let name = document.querySelector(".js-card-name");
-let family = document.querySelector(".js-card-family");
-let description = document.querySelector(".js-card-description");
-let skill = document.querySelector(".js-card-skill");
-let origin = document.querySelector(".js-card-origin");
-let weapon = document.querySelector(".js-card-weapon");
-let level = document.querySelector(".js-card-level");
-let image = document.querySelector(".js-profile-image");
-let elementagua = document.querySelector(".js-element-agua");
-let elementfuego = document.querySelector(".js-element-fuego");
-let elementviento = document.querySelector(".js-element-viento");
-let elementtierra = document.querySelector(".js-element-tierra");
+// función para resetear la carta
 function resetCard() {
   level.innerHTML = "58";
   name.innerHTML = "Éowyn, lady of Rohan";
@@ -118,6 +113,11 @@ function resetCard() {
   elementtierra.classList.add("hidden");
 }
 
+
+// EVENTOS Y LLAMADAS A FUNCIONES
+initInputs();
+initSelectBg();
+inputLevel.addEventListener("input", handleClickLevel);
 resetButton.addEventListener("click", resetCard);
 
 

@@ -1,6 +1,6 @@
 
 'use strict';
-
+// creamos data en main que lo vamos a estar llamando desde distintos archivos js y reescribiendo:
 const data = 
      {
     "field1": 0,
@@ -15,9 +15,9 @@ const data =
     "photo": "",
     };
 
+// llamamos a todos los demás archivos js::::
 
-console.log("main funciona");
 import "./get-avatar.js";
-import "./form.js";
-import "./share.js";
+import "./form.js"; 
+import "./pre-share.js";
 import "./accordion.js";
