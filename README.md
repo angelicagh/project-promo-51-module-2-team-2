@@ -17,7 +17,7 @@ Este proyecto ha sido desarrollado como parte del módul 2 de desarrollo web, tr
 
 1. Clona el repositorio.
 2. Instala las dependencias si usas Vite:
-   ```bash
+   bash
    npm install
 3. lanza el servidor de desarrollo:
    npm run dev
