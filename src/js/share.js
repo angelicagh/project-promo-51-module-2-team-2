@@ -6,22 +6,6 @@ const urlParm = new URLSearchParams(window.location.search);
 // cogerá lo de infoID que pone en la url:
 const infoID = urlParm.get("infoID"); // este será el uuid de mi url
 
-// constantes carta: 
-// pendiente: podríamos hacer un js solo para variables de carta y llamarlo desde form.js y desde aquí para no repetirnos (si nos da tiempo)
-let cardElements = document.querySelector(".js-card-elements");
-const card = document.querySelector(".js-card");
-let name = document.querySelector(".js-card-name");
-let family = document.querySelector(".js-card-family");
-let description = document.querySelector(".js-card-description");
-let skill = document.querySelector(".js-card-skill");
-let origin = document.querySelector(".js-card-origin");
-let weapon = document.querySelector(".js-card-weapon");
-let level = document.querySelector(".js-card-level");
-let image = document.querySelector(".js-profile-image");
-// let elementagua = document.querySelector(".js-element-agua");
-// let elementfuego = document.querySelector(".js-element-fuego");
-// let elementviento = document.querySelector(".js-element-viento");
-// let elementtierra = document.querySelector(".js-element-tierra");
 
 
 if (infoID) {
