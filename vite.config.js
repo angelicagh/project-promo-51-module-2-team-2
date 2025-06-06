@@ -28,6 +28,7 @@ const htmlFilesList = Object.fromEntries(
 const inputFilesList = {
   ...htmlFilesList,
   'main': 'src/js/main.js',
+  'share': 'src/js/share.js',
 }
 
 export default defineConfig({
