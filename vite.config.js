@@ -48,6 +48,9 @@ export default defineConfig({
           if( name === 'main' ) {
             return 'js/main.js';
           }
+          if( name === 'share' ) {
+            return 'js/share.js';
+          }
           // default value
           // ref: https://rollupjs.org/configuration-options/#output-entryfilenames
           return "[name].js";
