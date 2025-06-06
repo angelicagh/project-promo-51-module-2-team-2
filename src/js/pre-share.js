@@ -31,7 +31,7 @@ const handleClickCreateCard = (ev) => {
     .then((response) => response.json())
     .then((data) => {
         console.log("Success:", data);
-        linkCreatedCard.href = `./share.html?infoID=${data.infoID}`;
+        linkCreatedCard.href = `https://angelicagh.github.io/project-promo-51-module-2-team-2/share.html?infoID=${data.infoID}`; // ESTA ES LA URL Q HAY QUE CAMBIAR EN TEORÍA
         linkCreatedCard.classList.remove("hidden");
     })
     .catch((error) => {

@@ -42,6 +42,7 @@ if (infoID) {
             if (data.data.field8 !==""){
             card.classList.add(data.data.field8);
             }
+            cardElements = `data.data.field9`;
 
     // añadir las que faltan
     })
