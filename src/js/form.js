@@ -11,7 +11,7 @@ const selectBg = document.querySelectorAll(".js_background-img");
  
 // constantes carta: 
 
-const cardElements = document.querySelector(".js-card-elements");
+let cardElements = document.querySelector(".js-card-elements");
 const cardLevel = document.querySelector(".js-card-level");
 const card = document.querySelector(".js-card");
 let name = document.querySelector(".js-card-name");
@@ -69,6 +69,8 @@ checkboxElements.addEventListener("change", (ev) => {
   } else {
     elementByClass.classList.add("hidden");
   }
+  // data.field9 = cardElements;
+  console.log(cardElements);
 });
 
 // decorar el fondo de la carta
@@ -85,6 +87,7 @@ function handleSelectBg(ev) {
     inputBg.checked;
     background.classList.add("form-background__img--selected");
     card.classList.add(cardBgClass);
+    data.field8 = cardBgClass;
   } else if (inputBg.checked === false) {
     background.classList.remove("form-background__img--selected");
   }

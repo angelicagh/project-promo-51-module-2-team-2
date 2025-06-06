@@ -8,7 +8,7 @@ const infoID = urlParm.get("infoID"); // este será el uuid de mi url
 
 // constantes carta: 
 // pendiente: podríamos hacer un js solo para variables de carta y llamarlo desde form.js y desde aquí para no repetirnos (si nos da tiempo)
-const cardElements = document.querySelector(".js-card-elements");
+let cardElements = document.querySelector(".js-card-elements");
 const card = document.querySelector(".js-card");
 let name = document.querySelector(".js-card-name");
 let family = document.querySelector(".js-card-family");
@@ -18,10 +18,10 @@ let origin = document.querySelector(".js-card-origin");
 let weapon = document.querySelector(".js-card-weapon");
 let level = document.querySelector(".js-card-level");
 let image = document.querySelector(".js-profile-image");
-let elementagua = document.querySelector(".js-element-agua");
-let elementfuego = document.querySelector(".js-element-fuego");
-let elementviento = document.querySelector(".js-element-viento");
-let elementtierra = document.querySelector(".js-element-tierra");
+// let elementagua = document.querySelector(".js-element-agua");
+// let elementfuego = document.querySelector(".js-element-fuego");
+// let elementviento = document.querySelector(".js-element-viento");
+// let elementtierra = document.querySelector(".js-element-tierra");
 
 
 if (infoID) {
@@ -29,7 +29,8 @@ if (infoID) {
     fetch(`https://dev.adalab.es/api/info/${infoID}`)
     .then((response) => response.json())
     .then((data) => {
-        console.log("Data recibida:", data);
+        console.log(data);
+        console.log("field9: ");
             level.innerHTML = data.data.field1;
             name.innerHTML = data.data.field2;
             family.innerHTML = data.data.field3;
@@ -37,7 +38,11 @@ if (infoID) {
             skill.innerHTML = data.data.field5;
             origin.innerHTML = data.data.field6;
             weapon.innerHTML = data.data.field7;
-            image.style.backgroundImage = data.data.photo;
+            image.style.backgroundImage = `url('${data.data.photo}')`;
+            if (data.data.field8 !==""){
+            card.classList.add(data.data.field8);
+            }
+
     // añadir las que faltan
     })
     .catch((error) => {

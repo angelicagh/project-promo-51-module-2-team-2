@@ -18,7 +18,6 @@ const handleClickCreateCard = (ev) => {
     data.field5 = skill.innerHTML;
     data.field6 = origin.innerHTML;
     data.field7 = weapon.innerHTML;
-    data.field8 = "";
 
     console.log(data);
    
