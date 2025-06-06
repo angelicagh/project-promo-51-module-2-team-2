@@ -28,7 +28,6 @@ const htmlFilesList = Object.fromEntries(
 const inputFilesList = {
   ...htmlFilesList,
   'main': 'src/js/main.js',
-  'share': 'src/js/share.js',
 }
 
 export default defineConfig({
@@ -47,9 +46,6 @@ export default defineConfig({
         entryFileNames: ({name}) => {
           if( name === 'main' ) {
             return 'js/main.js';
-          }
-          if( name === 'share' ) {
-            return 'js/share.js';
           }
           // default value
           // ref: https://rollupjs.org/configuration-options/#output-entryfilenames
@@ -70,7 +66,7 @@ export default defineConfig({
       /* pass your config */
     }),
     concat({
-      input: ['main.js', 'share.js']
+      input: ['main.js']
     }),
   ],
 });
